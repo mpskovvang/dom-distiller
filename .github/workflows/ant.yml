@@ -46,3 +46,5 @@ jobs:
       run: ant test -Dtest.shuffle=1 -Dtest.repeat=10
     - name: Package
       run: ant package
+    - name: Create standalone JavaScript
+      run: ant extractjs
