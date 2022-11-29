@@ -22,7 +22,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Set up JDK 8
-      uses: actions/setup-java@v2
+      uses: actions/setup-java@v3
       with:
         java-version: '8'
         distribution: 'adopt'
@@ -46,7 +46,7 @@ jobs:
       run: ant package
     - name: Create standalone JavaScript
       run: ant extractjs
-    - name: Archive code coverage results
+    - name: Upload artifact
       uses: actions/upload-artifact@v3
       with:
         name: domdistiller.js
