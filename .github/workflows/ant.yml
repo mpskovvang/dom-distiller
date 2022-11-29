@@ -48,3 +48,8 @@ jobs:
       run: ant package
     - name: Create standalone JavaScript
       run: ant extractjs
+    - name: Archive code coverage results
+      uses: actions/upload-artifact@v3
+      with:
+        name: domdistiller.js
+        path: out/domdistiller.js
